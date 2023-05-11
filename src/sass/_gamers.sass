@@ -1,0 +1,43 @@
+.gamers
+    background-color: $color-blue-dark
+    grid-column: col-start 7 / full-end
+    padding: 25% 2rem 15rem 5rem
+    display: grid
+    grid-template-columns: max-content
+    align-items: center
+    align-content: center
+    justify-content: center
+    @media screen and (max-width: 830px) 
+        grid-column: 1 / -1
+        padding: 3rem 0
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1 fr))
+        justify-items: center
+    @media screen and (max-width: 420px)
+        grid-template-columns: min-content
+        justify-items: start
+    &__box
+        
+        @media screen and (max-width: 830px)
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(auto-fit, 1fr)
+            gap: 4rem 2rem
+        @media screen and (max-width: 730px)
+            grid-template-columns: max-content
+            justify-items: start
+    &__item
+        display: grid
+        grid-template-columns: min-content 1fr
+        gap: 4rem 2rem
+    &__img
+        border-radius: 50%
+        width: 7rem
+    &__text
+        align-self: center
+    &__score
+        font-weight: 300
+        color: $color-gray-dark
+.title-3_gamers
+    color: $color-green-light
+    text-align: center
+    margin-bottom: 3.7rem
